@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cortinillas</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <img id="main-logo" class="main-logo" src="../landing-iimap/public/assets/iimap.webp" alt="logo">
+    </div>
+    <div class="my-container" id="my-container">
+        <img id="my-logo" class="my-logo" src="../landing-iimap/public/assets/iimap.webp" alt="logo">
+        <div class="my-names">
+            <p class="fullname">Martín Melo Godínez</p>
+            <p>Coordinador de matemáticas e ingeniería</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    const mainLogo = document.querySelector('#main-logo');
+    const container = document.querySelector('#container');
+    const myContainer = document.querySelector('#my-container');
+    ;
+
+    setTimeout(() => {
+        mainLogo.style.display = 'none';
+        container.innerHTML += `
+        <div class="text-container" id="text-container">
+            <p class="name">IIMAP</p>
+            <span class="slogan">Talento formando talento</span>
+            <img src="../landing-iimap/public/assets/iimap.webp" alt="logo">
+        </div>
+        `
+    }, 4500);
+
+    setTimeout(() => {
+        container.style.display = 'none';
+        myContainer.style.display = 'flex';
+    }, 7500);
+</script>
+</html>
